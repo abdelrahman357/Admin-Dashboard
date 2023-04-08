@@ -1,0 +1,270 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --main-color: #1992d4;
+    --section-color: #e2e8f0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+nav {
+    background-color: var(--main-color);
+    grid-row: 1 / 3;
+    padding: 20px;
+    display: grid;
+    align-content: start;
+    gap: 50px;
+}
+svg.dash {
+    fill: white;
+}
+nav .header {
+    display: grid;
+    grid-auto-columns: 50px 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+}
+nav .header .header {
+    fill: white;
+    height: 2.5rem;
+}
+nav .header h2 {
+    color: white;
+    font-size: 1.6rem;
+
+}
+nav a {
+    color: white;
+}
+nav ul {
+    display: grid;
+    gap: 15px;
+}
+nav ul li a {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+nav ul li a svg {
+    height: 1.5rem;
+}
+
+
+header {
+    padding: 30px 50px 30px 30px;
+    display: grid;
+    gap: 25px;
+    position: relative;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+}
+header > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+header .upper {
+    gap: 100px;
+}
+header .upper .search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+header .upper .search input {
+    background-color: #e2e8f0;
+    border:none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    caret-color: var(--main-color);
+}
+header .upper .search input:focus {
+    outline: none;
+}
+header .upper .search .icon.upper {
+    height: 1.5rem
+}
+header .upper .upper-user {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+} 
+header .upper .upper-user p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+
+}
+header .upper .upper-user svg {
+    height: 24px;
+}
+header .upper .upper-user img {
+    height: 45px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #facc15;
+}
+header .lower {
+    justify-content: space-between;
+    gap: 100px;
+}
+header .lower .lower-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header .lower .lower-user img {
+    height: 60px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #facc15;
+}
+header .lower .lower-user .text p:first-child {
+    font-weight: bold;
+    font-size: .9rem;
+}
+header .lower .lower-user .text p:last-child {
+    font-weight: bold;
+    font-size: 1.5rem; 
+}
+header .lower .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+}
+header .lower .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+section.main {
+    grid-row: 2;
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: var(--section-color);
+    gap: 30px;
+}
+section.main .projects h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+section.main .projects-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px 20px;
+}
+section.main .projects-content .project {
+    background-color: white;
+   padding: 30px 20px;
+   height: 200px;
+    display: grid;
+    align-content: space-between;
+    border-left: 8px solid #f0b429;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+section.main .projects-content .project .icons {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+section.main .projects-content .project  p {
+    color: #636363;
+}
+section.main .projects-content .project .icons svg {
+    padding: 0;
+    height: 1.5rem;
+    fill: #333333;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+section.main aside >section >div{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+section.main aside .announcements h3{
+    margin-bottom: 10px;
+}
+section.main aside .announcements .cards{
+    background-color: white;
+    padding: 30px;
+    border-radius: 6px;
+    display: grid;
+}
+section.main aside .announcements .cards .card {
+    padding: 10px 0;
+}
+section.main aside .announcements .cards .card + .card {
+    border-top: 1px solid #ddd;
+}
+section.main aside .announcements .cards p {
+    font-size: .8rem;
+    color: #636363;
+    margin-top: 4px;
+}
+section.main aside .trending {
+    margin-top: 25px;
+}
+section.main .trending h3 {
+    margin-bottom: 10px;
+}
+section.main .trending .profiles {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 6px;
+    display: grid;
+    gap: 20px;
+}
+section.main .trending .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+section.main .trending .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 4px;
+}
+section.main .trending .profile .dog {
+    background-color: lightblue;
+}
+section.main .trending .profile .cat {
+    background-color: yellow;
+}
+section.main .trending .profile .spiderman {
+    background-color: grey;
+}
+section.main .trending .profile .iceman {
+    background-color: pink;
+}
+section.main .trending p:last-child {
+    margin-top: 3px;
+    color: #636363;
+}
+
